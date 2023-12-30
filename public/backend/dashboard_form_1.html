@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Dashboard Form-1 </title>
+    <link rel="stylesheet" href="fonts/remixicon.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/calender.css">
+    <!-- Start Form_1 css -->
+    <link rel="stylesheet" href="css/chosen.min.css">
+    
+      <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="body">
+    <section class="header">
+        <div class="logo">
+            <i class="ri-menu-line icon icon-0 menu"></i>
+            <img src="images/Group.svg" alt="logo">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="back-to" style="background: #0088EA; padding: 5px 2px; text-align:center; width:13%;border-radius: 10px;"><span ><a style="color:#fff !important; font-size: 14px;" href="dashboard.html" target="blank">Back to Website</a></span></div>
+        <div class="search--notification--profile">
+            <div class="search">
+                <input type="text" placeholder="Search....">
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+            <div class="notification--profile">
+                <div class=" dark--theme--btn">
+                    <i class="bell picon ri-moon-line moon"></i>
+                    <i class=" chat picon ri-sun-line sun"></i>
+                </div>
+                 <div class="header-left">
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ri-notification-2-line"></i>
+                                <span class="count bg-danger">3</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="ri-check-fill"></i>
+                                    <p>Server #1 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="ri-information-line"></i>
+                                    <p>Server #2 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="ri-alarm-warning-fill"></i>
+                                    <p>Server #3 overloaded.</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown for-message">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ri-chat-poll-fill"></i>
+                                <span class="count bg-primary">4</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="message">
+                                <p class="red">You have 4 Mails</p>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/2.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Jonathan Smith</span>
+                                        <span class="time float-right">Just now</span>
+                                        <p>Hello, this is an example msg</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/1.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Jack Sanders</span>
+                                        <span class="time float-right">5 minutes ago</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/3.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Cheryl Wheeler</span>
+                                        <span class="time float-right">10 minutes ago</span>
+                                        <p>Hello, this is an example msg</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/4.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Rachel Santos</span>
+                                        <span class="time float-right">15 minutes ago</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                 <div class="user-area dropdown float-right">
+                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="picon profile">
+                            <img src="images/pic.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="user-menu dropdown-menu">
+                        <a class="nav-link" href="#"><i class="ri-user-fill"></i>My Profile</a>
+
+                         <a class="nav-link" href="#"><i class="ri-notification-fill"></i>Notifications <span class="count">13</span></a>
+                          <a class="nav-link" href="#"><i class="ri-chat-poll-fill"></i>Messages <span class="count">10</span></a>
+                        <a class="nav-link" href="#"><i class="ri-settings-5-fill"></i>Settings</a>
+
+                        <a class="nav-link" href="#"><i class="ri-shut-down-line"></i>Logout</a>
+                    </div>
+                </div>
+                <div class="logout" style="margin-left: 10px;">AshikYer <br><span style="color:red; font-weight: 600; cursor:pointer;">Logout</span> </div> 
+            </div> 
+        </div>
+    </section>
+    <section class="main">
+        <div class="sidebar ">
+            <ul class="sidebar--items" onclick="sidefunction()">
+                <li >
+                    <a href="dashboard.html" id="actives"  >
+                        <span class="icon "> <i class="ri-dashboard-fill " ></i> </span>
+                        <span class="sidebar--item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="sellFunction();" class="actives">
+                        <span class="icon icon-2"> <i class="ri-survey-fill"></i> </span>
+                        <span class="sidebar--item">Forms</span>
+                        <span class="icon-up"><i class="ri-arrow-down-s-line"></i> </span>
+                    </a>
+                    <div style="display: none;" class="order-list " id="sellDIV">
+                      <ul >
+
+                          <li><a href="dashboard_form.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form One</a></li>  
+                          <li><a href="dashboard_form_1.html" class="actives"><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form Two</a></li>  
+                          <li><a href="dashboard_form_2.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form Three</a></li> 
+                          <li><a href="dashboard_form_3.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form Four</a></li>           
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard_modal_page.html" >
+                        <span class="icon icon-4"> <i class="ri-hotel-fill"></i> </span>
+                        <span class="sidebar--item">Modal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="olFunction();">
+                        <span class="icon icon-4"> <i class="ri-box-1-fill"></i> </span>
+                        <span class="sidebar--item">Tables </span> 
+                        <span class="icon-up"><i class="ri-arrow-down-s-line"></i> </span>
+                    </a>
+                    <div style="display: none;" class="order-list " id="olDIV">
+                      <ul>
+
+                          <li><a href="dashboard_table.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table One</a></li>  
+                          <li><a href="dashboard_table_2.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table Two</a></li>  
+                          <li><a href="dashboard_data_table.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table Three</a></li> 
+                          <li><a href="dashboard_payment_table.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table Four</a></li>     
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard_calendar.html" >
+                        <span class="icon icon-3"> <i class="ri-calendar-fill"></i> </span>
+                        <span class="sidebar--item">Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard_tabs.html"  >
+                        <span class="icon icon-5"> <i class="ri-team-fill"></i> </span>
+                        <span class="sidebar--item">Tabs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard_upload_page.html" >
+                        <span class="icon icon-3"> <i class="ri-user-2-fill"></i> </span>
+                        <span class="sidebar--item" style="white-space: nowrap;">Upload</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-4"><i class="ri-briefcase-2-fill"></i></span>
+                        <span class="sidebar--item">Content </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-3"> <i class="ri-wechat-fill"></i> </span>
+                        <span class="sidebar--item">FAQ manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-5"> <i class="ri-bar-chart-2-fill"></i> </span>
+                        <span class="sidebar--item">Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-2"> <i class="ri-settings-5-fill"></i> </span>
+                        <span class="sidebar--item">Website Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-6"> <i class="ri-file-list-3-fill"></i> </span>
+                        <span class="sidebar--item">System Configure</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-4"> <i class="ri-briefcase-4-fill"></i> </span>
+                        <span class="sidebar--item">User Permission </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-2"> <i class="ri-cake-2-fill"></i> </span>
+                        <span class="sidebar--item">API Manager</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="#" >
+                        <span class="icon icon-2"><i class="ri-centos-fill"></i></span>
+                        <span class="sidebar--item">Addon Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-7"><i class="ri-settings-3-line"></i></span>
+                        <span class="sidebar--item">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-8"><i class="ri-logout-box-r-line"></i></span>
+                        <span class="sidebar--item">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="background: linear-gradient(0deg, rgba(255, 255, 255, 0) 1.13%, #C7FEFF 86.9%); height: 35px; padding-top: 10px;"></div>
+        <div class="main--content">
+                <!-- company form -->
+            <div class="reg_form ">
+                <h2>Company Form</h2>
+                <form>
+                    <div class="">
+                        <label class="form-label" for="basic-form-name">Company Name</label><br>
+                        <input class="form-control" id="basic-form-name" type="text" placeholder="enter your company name" required>
+                    </div>
+                    <div class="">
+                        <label class="form-label" for="basic-form-name">VAT</label><br>
+                        <input class="form-control" id="basic-form-name" type="text" placeholder="DR123456" required>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Date input</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ri-calendar-2-line"></i></div>
+                            <input class="form-control" placeholder="Date input" type="text">
+                        </div>   
+                        <small class="form-text text-muted">ex. 99/99/9999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Phone number</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ri-phone-line"></i></div>
+                            <input class="form-control" type="number" placeholder="Phone number">
+                        </div>
+                        <small class="form-text text-muted">ex. (999) 999-9999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Identification Numbers</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ri-money-dollar-circle-line"></i></div>
+                            <input class="form-control" placeholder="Identification Numbers">
+                        </div>
+                        <small class="form-text text-muted">ex. 99-9999999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Security Number</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ri-lock-line"></i></div>
+                            <input class="form-control" placeholder="Security Number">
+                        </div>
+                        <small class="form-text text-muted">ex. 999-99-9999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Script</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ri-asterisk"></i></div>
+                            <input class="form-control" placeholder="Script">
+                        </div>
+                        <small class="form-text text-muted">ex. ~9.99 ~9.99 999</small>
+                    </div>
+                    <div class="form-group">
+                        <label class=" form-control-label">Credit Card Number</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ri-bank-card-line"></i></div>
+                            <input class="form-control" type="text" placeholder="Credit Card Number">
+                        </div>
+                        <small class="form-text text-muted">ex. 9999 9999 9999 9999</small>
+                    </div>
+                    <div class="fo_grid fr_gridd">
+                        <div class="">
+                            <label class="form-label" for="basic-form-email">Email address</label><br>
+                            <input class="form-control" id="basic-form-email" type="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="">
+                            <label class="form-label" for="basic-form-password">Password</label><br>
+                            <input class="form-control" id="basic-form-password" type="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="fo_grid fr_gridd">
+                        <div class="">
+                            <label class="form-label" for="inputAddress">Address</label><br>
+                            <input class="form-control" id="inputAddress" type="text" placeholder="Bogura, Majhira" required>
+                        </div>
+                        <div class="">
+                            <label class="form-label" for="inputAddress2">Address 2</label><br>
+                            <input class="form-control" id="inputAddress2" type="text" placeholder="House no-12 " required>
+                        </div>
+                    </div>
+                    <div class="f_grid f_grrrid">
+                        <div class="form_card">
+                            <div class="form_card-header">
+                                <label class="form_card-title">Select</label>
+                            </div>
+                            <div class="form_card-body">
+                                <select data-placeholder="Choose a Country..." class="standardSelect" tabindex="1">
+                                    <option value="" label="default"></option>
+                                    <option value="Bangladesh">Bangladesh </option>
+                                    <option value="India">India </option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Afghanistan">Afghanistan</option>
+                                    <option value="Aland Islands">Aland Islands</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Algeria">Algeria</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Andorra">Andorra</option>
+                                    <option value="Angola">Angola</option>
+                                    <option value="Anguilla">Anguilla</option>
+                                    <option value="Antarctica">Antarctica</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form_card">
+                            <div class="form_card-header">
+                                <label class="form_card-title">Multi Select</label>
+                            </div>
+                            <div class="form_card-body">
+                                <select data-placeholder="Choose a country..." multiple class="standardSelect">
+                                    <option value="" label="default"></option>
+                                    <option value="Bangladesh">Bangladesh </option>
+                                    <option value="India">India </option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Afghanistan">Afghanistan</option>
+                                    <option value="Aland Islands">Aland Islands</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Algeria">Algeria</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Andorra">Andorra</option>
+                                    <option value="Angola">Angola</option>
+                                    <option value="Anguilla">Anguilla</option>
+                                    <option value="Antarctica">Antarctica</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form_card fg_grrrid">
+                            <div class="form_card-header">
+                                <label class="form_card-title">Multi Select with Groups</label>
+                            </div>
+                            <div class="form_card-body">
+                                <select data-placeholder="Your Favorite Football Team" multiple class="standardSelect" tabindex="5">
+                                    <option value="" label="default"></option>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                    <optgroup label="something">
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                        <option>anything</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_grid  fr_gridd">
+                        <div class="">
+                            <label class="form-label" for="inputState">Country</label><br>
+                            <select class="form-select" id="inputState">
+                                <option selected="selected">Choose...</option>
+                                <option>Bangladesh</option>
+                                <option>India</option>
+                                <option>Pakistan</option>
+                                <option>Iraq</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <label class="form-label" for="inputState">State</label><br>
+                            <select class="form-select" id="inputState">
+                                <option selected="selected">Choose...</option>
+                                <option>Shajahanpur</option>
+                                <option>Sherpur</option>
+                                <option>Fultola</option>
+                                <option>Bogura Sodor</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <label class="form-label" for="basic-form-dob">Date</label><br>
+                            <input class="form-control" id="basic-form-dob" type="date" required>
+                        </div>
+                    </div>
+                    <div class="f_grid fr_gridd">
+                        <div class="">
+                            <label class="form-label" for="inputZip">Zip</label><br>
+                            <input class="form-control" id="inputZip" type="text" placeholder="zip Code" required>
+                        </div>
+                        <div class="">
+                            <label class="form-label" for="basic-form-dob">Date of Birth</label><br>
+                            <input class="form-control" id="basic-form-dob" type="date" required>
+                        </div>
+                        <div class="">
+                            <label class="form-label" for="inputZip">Postal Code</label><br>
+                            <input class="form-control" id="inputZip" type="text" placeholder="Postal Code" required>
+                        </div>
+                    </div>
+                    <div class="f_grid f_grrrid">
+                        <div class="">
+                            <label class="visually-hidden" for="Select">Preference</label><br>
+                            <select class="form-select form-dob" id="Select">
+                                <option selected="selected">Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <label class="form-label" for="basic-form-gender">Gender</label><br>
+                            <select class="form-select form-dob" id="basic-form-gender" aria-label="Default select example">
+                                <option selected="selected">Select your gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="fg_grrrid">
+                            <label class="form-label">Upload File</label><br>
+                            <input class="form-control form-doob" type="file" required>
+                        </div>
+                    </div>
+                    <div class=" descrip">
+                        <label class="form-label" for="basic-form-textarea">Description</label><br>
+                        <textarea class="form-control" id="basic-form-textarea" rows="3" placeholder="Description"></textarea>
+                    </div>
+                    <div class="ff_grid fr_grd">
+                        <div class="form-check">
+                            <input class="form-check-input" id="Radio1" type="radio" name="Radio" required>
+                            <label class="form-check-label mb-0" for="Radio1">Personal Account</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="Radio2" type="radio" name="Radio" checked="checked" required>
+                            <label class="form-check-label mb-0" for="Radio2">Business Account</label>
+                        </div>                        
+                        <div class="">
+                            <div class="form-check">
+                                <input class="form-check-input" id="Check" type="checkbox" required>
+                                <label class="form-check-label" for="Check">Check me out</label>
+                            </div>
+                        </div>
+                        <div class=" form-check ">
+                            <input class="form-check-input" id="basic-form-checkbox" type="checkbox" required>
+                            <label class="form-check-label" for="basic-form-checkbox">Remember me</label>
+                        </div>
+                    </div>
+                    <button class="btn btnst" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>        
+    </section>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     <!-- Start Form_1 js-->
+    <script src="js/jquery.matchHeight.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+    <script>
+    	let menu = document.querySelector('.menu')
+		let sidebar = document.querySelector('.sidebar')
+		let mainContent = document.querySelector('.main--content')
+
+		menu.onclick = function() {
+		    sidebar.classList.toggle('active')
+		    mainContent.classList.toggle('active')
+		}
+    </script>
+    <script>
+    	//-----order list--------
+
+		function olFunction() {
+		          var x = document.getElementById("olDIV");
+		          if (x.style.display === "none") {
+		          x.style.display = "block";
+		        } else {
+		          x.style.display = "none";
+		        }
+		    }
+
+		function usFunction() {
+		          var x = document.getElementById("usDIV");
+		          if (x.style.display === "none") {
+		          x.style.display = "block";
+		        } else {
+		          x.style.display = "none";
+		        }
+		    } 
+
+		function sellFunction() {
+		          var x = document.getElementById("sellDIV");
+		          if (x.style.display === "none") {
+		          x.style.display = "block";
+		        } else {
+		          x.style.display = "none";
+		        }
+		    }        
+    </script>
+    <script>
+    	let body = document.querySelector(".body")
+		let sun = document.querySelector(".sun")
+		let moon = document.querySelector(".moon")
+
+		moon.onclick = function(){
+		    body.classList.add("dark--mode")
+		}
+		sun.onclick = function(){
+		    body.classList.remove("dark--mode")
+		}
+    </script>
+
+    <script>
+        jQuery(document).ready(function() {
+            jQuery(".standardSelect").chosen({
+                disable_search_threshold: 10,
+                no_results_text: "Oops, nothing found!",
+                width: "100%"
+            });
+        });
+    </script>
+
+     <script>
+          function sidefunction(){
+          document.getElementById("actives").classList.remove("actives");
+        }
+    </script>
+    <script>
+               $('.icon-up').click(function () {
+          $(this).toggleClass('rotate')
+        })
+    </script>
+  
+</body>
+</html>
+

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Dashboard Form</title>
+    <link rel="stylesheet" href="fonts/remixicon.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/calender.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="body">
+    <section class="header">
+        <div class="logo">
+            <i class="ri-menu-line icon icon-0 menu"></i>
+            <img src="images/Group.svg" alt="logo">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="back-to" style="background: #0088EA; padding: 5px 2px; text-align:center; width:13%;border-radius: 10px;"><span ><a style="color:#fff !important; font-size: 14px;" href="dashboard.html" target="blank">Back to Website</a></span></div>
+        <div class="search--notification--profile">
+            <div class="search">
+                <input type="text" placeholder="Search....">
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+            <div class="notification--profile">
+                <div class=" dark--theme--btn">
+                    <i class="bell picon ri-moon-line moon"></i>
+                    <i class=" chat picon ri-sun-line sun"></i>
+                </div>
+                 <div class="header-left">
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ri-notification-2-line"></i>
+                                <span class="count bg-danger">3</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="ri-check-fill"></i>
+                                    <p>Server #1 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="ri-information-line"></i>
+                                    <p>Server #2 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <i class="ri-alarm-warning-fill"></i>
+                                    <p>Server #3 overloaded.</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown for-message">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="message" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="ri-chat-poll-fill"></i>
+                                <span class="count bg-primary">4</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="message">
+                                <p class="red">You have 4 Mails</p>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/2.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Jonathan Smith</span>
+                                        <span class="time float-right">Just now</span>
+                                        <p>Hello, this is an example msg</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/1.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Jack Sanders</span>
+                                        <span class="time float-right">5 minutes ago</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/3.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Cheryl Wheeler</span>
+                                        <span class="time float-right">10 minutes ago</span>
+                                        <p>Hello, this is an example msg</p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item media" href="#">
+                                    <span class=" media-left"><img alt="avatar" src="images/4.jpg"></span>
+                                    <div class="message media-body">
+                                        <span class="name float-left">Rachel Santos</span>
+                                        <span class="time float-right">15 minutes ago</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                 <div class="user-area dropdown float-right">
+                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="picon profile">
+                            <img src="images/pic.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="user-menu dropdown-menu">
+                        <a class="nav-link" href="#"><i class="ri-user-fill"></i>My Profile</a>
+
+                         <a class="nav-link" href="#"><i class="ri-notification-fill"></i>Notifications <span class="count">13</span></a>
+                          <a class="nav-link" href="#"><i class="ri-chat-poll-fill"></i>Messages <span class="count">10</span></a>
+                        <a class="nav-link" href="#"><i class="ri-settings-5-fill"></i>Settings</a>
+
+                        <a class="nav-link" href="#"><i class="ri-shut-down-line"></i>Logout</a>
+                    </div>
+                </div>
+                <div class="logout" style="margin-left: 10px;">AshikYer <br><span style="color:red; font-weight: 600; cursor:pointer;">Logout</span> </div> 
+            </div> 
+        </div>
+    </section>
+    <section class="main">
+        <div class="sidebar ">
+            <ul class="sidebar--items" onclick="sidefunction()">
+                <li >
+                    <a href="dashboard.html" id="actives"  >
+                        <span class="icon "> <i class="ri-dashboard-fill " ></i> </span>
+                        <span class="sidebar--item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="sellFunction();">
+                        <span class="icon icon-2"> <i class="ri-survey-fill"></i> </span>
+                        <span class="sidebar--item">Forms</span>
+                        <span class="icon-up"><i class="ri-arrow-down-s-line"></i> </span>
+                    </a>
+                    <div style="display: none;" class="order-list " id="sellDIV">
+                      <ul >
+
+                          <li><a href="dashboard_form.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form 1</a></li>  
+                          <li><a href="dashboard_form_1.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form 2</a></li>  
+                          <li><a href="dashboard_form_2.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form 3</a></li> 
+                          <li><a href="dashboard_form_3.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Form 4</a></li>           
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard_modal_page.html" >
+                        <span class="icon icon-4"> <i class="ri-hotel-fill"></i> </span>
+                        <span class="sidebar--item">Modal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="olFunction();">
+                        <span class="icon icon-4"> <i class="ri-box-1-fill"></i> </span>
+                        <span class="sidebar--item">Tables </span> 
+                        <span class="icon-up"><i class="ri-arrow-down-s-line"></i> </span>
+                    </a>
+                    <div style="display: none;" class="order-list " id="olDIV">
+                      <ul>
+
+                          <li><a href="dashboard_table.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table 1</a></li>  
+                          <li><a href="dashboard_table_2.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table 2</a></li>  
+                          <li><a href="dashboard_data_table.html"  ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table 3</a></li> 
+                          <li><a href="dashboard_payment_table.html" ><span class="icon "> <i class="ri-checkbox-blank-circle-fill"></i> </span>Table 4</a></li>     
+                      </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="dashboard_calendar.html" >
+                        <span class="icon icon-3"> <i class="ri-calendar-fill"></i> </span>
+                        <span class="sidebar--item">Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard_tabs.html">
+                        <span class="icon icon-5"> <i class="ri-team-fill"></i> </span>
+                        <span class="sidebar--item">Tabs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard_upload_page.html" class="actives">
+                        <span class="icon icon-3"> <i class="ri-user-2-fill"></i> </span>
+                        <span class="sidebar--item" style="white-space: nowrap;">Upload</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-4"><i class="ri-briefcase-2-fill"></i></span>
+                        <span class="sidebar--item">Content </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-3"> <i class="ri-wechat-fill"></i> </span>
+                        <span class="sidebar--item">FAQ manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-5"> <i class="ri-bar-chart-2-fill"></i> </span>
+                        <span class="sidebar--item">Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-2"> <i class="ri-settings-5-fill"></i> </span>
+                        <span class="sidebar--item">Website Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-6"> <i class="ri-file-list-3-fill"></i> </span>
+                        <span class="sidebar--item">System Configure</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon icon-4"> <i class="ri-briefcase-4-fill"></i> </span>
+                        <span class="sidebar--item">User Permission </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-2"> <i class="ri-cake-2-fill"></i> </span>
+                        <span class="sidebar--item">API Manager</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="#" >
+                        <span class="icon icon-2"><i class="ri-centos-fill"></i></span>
+                        <span class="sidebar--item">Addon Manager</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="#" >
+                        <span class="icon icon-7"><i class="ri-settings-3-line"></i></span>
+                        <span class="sidebar--item">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <span class="icon icon-8"><i class="ri-logout-box-r-line"></i></span>
+                        <span class="sidebar--item">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="background: linear-gradient(0deg, rgba(255, 255, 255, 0) 1.13%, #C7FEFF 86.9%); height: 35px; padding-top: 10px;"></div>
+        <div class="main--content">
+          <div class="file_uploade">
+            <div class="main-carrrd">
+          <div class="ccardds">
+            <div class="frame">
+            <div class="center">
+              <div class="dropzone">
+                <img src="images/up.png" />
+              </div>
+              <div class="tiittle">
+                <h1>Drag and drop files to upload</h1><br><br>
+                <p>OR</p>
+              </div>
+              <button type="button" class="bbttn" name="uploadbutton">
+                <input type="file" name="uploadfile" id="img" style="display:none;"/>
+                <label for="img">Browse</label>
+            </button>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="maiin-caarrds">
+          <div class="ccaarrd">
+            <p>Image.jpg</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" style="width:100%"></div> 
+            </div>
+            <p>10 MB</p>
+            <p style="text-align: right; margin-top: -40px; margin-bottom: 0px;">100%</p>
+          </div>        
+          <div class="ccaarrd">
+            <p>Image_2.jpg</p>
+            <div class="progress">
+              <div class="progress-bar  progress-bar-striped" style="width:65%"></div>
+            </div>
+            <p>2 MB</p>
+            <p style="text-align: right; margin-top: -40px; margin-bottom: 0px;">65%</p>
+          </div>
+        </div>
+        <div class="main-cardd11">
+          <div class="ccaarrd">
+            <p style="text-align: center; color:#000; font-size: 24px;">Product Title name</p>
+            
+          </div>
+        
+          <div class="ccaarrd caarrd">
+            <p >description of Product</p>            
+          </div>
+        </div>
+        <div class="stoock-ccard">
+          <div class="ccaarrd">
+            <p><a href="#">category ></a></p>
+          </div>
+          <div class="ccaarrd">
+           <p>Stock: <input type="text"></p>
+
+          </div>
+          <div class="ccaarrd">
+            <p>Price: <input type="text" placeholder="৳"></p>
+          </div>
+        </div>
+        <div  class="main-carrrd">
+          <div style="background: #0088EA;" class="ccaarrd">
+            <p style="text-align: center; color: #fff;"><a style="color: #fff; font-weight: 700; font-size: 24px;" href="#">Upload & save</a></p>
+            
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+
+    <script>
+    	let menu = document.querySelector('.menu')
+		let sidebar = document.querySelector('.sidebar')
+		let mainContent = document.querySelector('.main--content')
+
+		menu.onclick = function() {
+		    sidebar.classList.toggle('active')
+		    mainContent.classList.toggle('active')
+		}
+    </script>
+    <script>
+    	//-----order list--------
+
+		function olFunction() {
+		          var x = document.getElementById("olDIV");
+		          if (x.style.display === "none") {
+		          x.style.display = "block";
+		        } else {
+		          x.style.display = "none";
+		        }
+		    }
+
+		function usFunction() {
+		          var x = document.getElementById("usDIV");
+		          if (x.style.display === "none") {
+		          x.style.display = "block";
+		        } else {
+		          x.style.display = "none";
+		        }
+		    } 
+
+		function sellFunction() {
+		          var x = document.getElementById("sellDIV");
+		          if (x.style.display === "none") {
+		          x.style.display = "block";
+		        } else {
+		          x.style.display = "none";
+		        }
+		    }        
+    </script>
+    <script>
+    	let body = document.querySelector(".body")
+		let sun = document.querySelector(".sun")
+		let moon = document.querySelector(".moon")
+
+		moon.onclick = function(){
+		    body.classList.add("dark--mode")
+		}
+		sun.onclick = function(){
+		    body.classList.remove("dark--mode")
+		}
+    </script>
+
+   
+    <script>
+          function sidefunction(){
+          document.getElementById("actives").classList.remove("actives");
+        }
+    </script>
+    <script>
+               $('.icon-up').click(function () {
+          $(this).toggleClass('rotate')
+        })
+    </script>
+
+</body>
+</html>
+
